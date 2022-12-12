@@ -7,7 +7,6 @@ def substrings(word, dictionary)
             results[w] = word.downcase.scan(w).length
         end
     end
-    p results
 end
 
-substrings('below', dictionary)
+substrings("Howdy partner, sit down! How's it going?", dictionary)
