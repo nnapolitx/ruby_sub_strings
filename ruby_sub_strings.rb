@@ -1,7 +1,13 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def substrings(word, dictionary)
-    p word
+    results = Hash.new
+    dictionary.map do |w|
+        if word.downcase[w]
+            results[w] = word.downcase.scan(w).length
+        end
+    end
+    p results
 end
 
 substrings('below', dictionary)
